@@ -1,0 +1,48 @@
+{
+  "name": "fix-my-barangay-backend",
+  "version": "1.0.0",
+  "description": "Fix My Barangay Backend API",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "migrate": "node scripts/migrate.js",
+    "migrate:test": "node -e \"require('./scripts/migrate.js').testConnection()\"",
+    "migrate:verify": "node scripts/verify.js",
+    "vercel-build": "npm run build"
+  },
+  "keywords": [
+    "civic",
+    "reporting",
+    "pwa",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^2.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.16.3",
+    "ratelimiter": "^3.4.1",
+    "redis": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/morgan": "^1.9.10",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.5.2",
+    "@types/pg": "^8.15.5",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
