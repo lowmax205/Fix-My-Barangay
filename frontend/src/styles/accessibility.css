@@ -1,0 +1,20 @@
+:root {
+  --hc-bg: #000;
+  --hc-fg: #fff;
+  --hc-accent: #ffd800;
+}
+
+.high-contrast, .high-contrast * {
+  color: var(--hc-fg) !important;
+  background-color: var(--hc-bg) !important;
+  border-color: var(--hc-accent) !important;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid var(--hc-accent);
+  outline-offset: 2px;
+}
+
+button, a, input, select, textarea {
+  min-height: 44px;
+}
